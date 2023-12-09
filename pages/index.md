@@ -24,8 +24,8 @@ another was a qualification to the American Invitational Math Examination
 Unfortunately, I only had two shots at these contests due to age restrictions
 (I wish I had known about them earlier!), but I had a lot of fun preparing for
 and participating in them. Through these contests, I learned the art of
-problem-solving—a skill requiring persistently carving new paths on journeys
-filled with apparent dead ends.
+problem-solving—a skill requiring carving new paths in the face of apparent
+dead ends.
 
 I also gained a love of solving what are known as 'Olympiad`(sidenote "The
 Olympiad culture has a rich and deep history dating back to East Europe in the
