@@ -1,0 +1,330 @@
+/*  nodalynn.com - Personal Website of Lynn Noda */
+
+/*  Copyright © 2023 Lynn Noda <lynn@nodalynn.com> */
+
+/*  This program is free software: you can redistribute it and/or modify */
+/*  it under the terms of the GNU General Public License as published by */
+/*  the Free Software Foundation, either version 3 of the License, or */
+/*  (at your option) any later version. */
+
+/*  This program is distributed in the hope that it will be useful, */
+/*  but WITHOUT ANY WARRANTY; without even the implied warranty of */
+/*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the */
+/*  GNU General Public License for more details. */
+
+/*  You should have received a copy of the GNU General Public License */
+/*  along with this program.  If not, see <https://www.gnu.org/licenses/>. */
+
+/* Color Theme: 
+ * Aquamarine: #7FFFD4
+ * Anti-Flash White: #EEEEEE
+ * Silver: #C2C2C2
+ * Robin Egg Blue: #3FCCC2
+ * Verdigris: #33C1B8
+ * Light Sea Green: #2FB1A9
+ * Dark Cyan: #048A81
+ * Rich Black: #0D1821
+ * */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0em;
+    padding: 0em;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0D1821;
+
+    /* use bigger font that is easier to read */
+    background: #EEEEEE;
+}
+
+nav.picnic {
+    height: 3.85em;
+}
+
+h1 {
+    padding: 0em 0em 0.2em 0em;
+    scroll-margin-top: 4em;
+}
+
+h2 {
+    padding: 0.2em 0em 0.2em 0em;
+    scroll-margin-top: 3.2em;
+}
+
+h3 {
+    padding: 0.2em 0em 0em 0em;
+    scroll-margin-top: 4em;
+}
+
+a {
+    color: #048A81;
+}
+
+a:link:not(.button) {
+    text-decoration: underline
+}
+
+a:hover:not(.button) {
+    color: #3fccc2;
+    text-decoration: none
+}
+
+a:active:not(.button) {
+    color: #7fffd4;
+}
+
+blockquote {
+    background-color: rgba(0,0,0,0.05);
+    padding: 0.7em 0.5em 0.7em 1em;
+}
+
+hr {
+    margin-top: 1.9em;
+    margin-bottom: 1em;
+}
+
+hr.gap {
+    visibility: hidden;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+}
+
+hr.prose {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+div.metadata {
+    margin-top: 0.4em;
+}
+
+/* below enables on-demand gallery image loading */
+/* the only cost is not having transition animations */
+article.slide {
+    display: none;
+}
+
+article.slide:target {
+    display: block;
+}
+
+.icon:hover {
+    filter: opacity(0.5);
+}
+
+.gallery {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.gallery.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em;
+    margin: 0.3em;
+    background: #33C1B8;
+    font-weight: 600;
+}
+
+.card {
+    /* margin-left: 1em; */
+    /* margin: 0 auto; */
+    max-width: 45em
+}
+
+.container {
+    padding-top: 3.85em;
+    margin: 0 auto;
+    /* max-width: 70em; */
+}
+
+.brand-link.button {
+    background: #7FFFD4;
+    border-radius: 1em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    font-family: Ubuntu;
+}
+
+.align-vertical {
+    display: flex; 
+    align-items: center;
+}
+
+#header-nav {
+    background: #33C1B8;
+    box-shadow: 0em 0.1em .7em #C2C2C2;
+}
+
+#brand-label {
+    padding: 0em;
+}
+
+#header-menu {
+    display: flex;
+}
+
+#feed {
+    border-radius: 50%;
+    background: #7FFFD4;
+    height: 2.5em;
+    width: 2.5em;
+    padding: unset;
+    margin-top: unset;
+    margin-bottom: unset;
+    justify-content: center;
+}
+
+#body {
+    box-sizing:border-box;
+    height: 100%;
+}
+
+#nav-container {
+    z-index: 1;
+    background: #FFFFFF;
+    box-shadow: 0 0 0.5em #C2C2C2;
+    padding-left: unset;
+}
+
+#hamburger-icon, #ham-toggle {
+    display: none;
+}
+
+#side-nav {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 3.85em;
+    padding-top: 1em;
+    padding-left: 0em;
+    clip-path: inset(0em -0.5em 0em 0em);
+}
+
+#content-section {
+    background-color: #EEEEEE;
+    padding-top: 2.5em;
+    padding-left: 3em;
+    padding-bottom: 3em;
+}
+
+#page-content {
+    background-color: unset;
+    max-width: 40em;
+}
+
+#page-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0em;
+}
+
+#top-nav {
+    font-weight: bold;
+    width: max-content;
+    border-radius: 1em;
+    transition: all .3s ease;
+}
+
+#footer-left {
+    float: left;
+    padding-left: 1em;
+}
+
+#footer-right {
+    float: right;
+    padding: 0.7em;
+    border-radius: 0.5em 0em 0em 0em;
+    background-color: #EEEEEE;
+}
+
+@media (max-width: 1500px) {
+    .sidenote-number:after {
+        color: #048A81;
+        text-decoration: underline;
+    }
+
+    #content-section {
+        display: flex;
+        justify-content: center;
+        background-color: #EEEEEE;
+        padding-top: 2.5em;
+        padding-left: unset;
+        padding-bottom: 3em;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    h1 {
+        scroll-margin-top: 5.05em;
+    }
+
+    h2 {
+        scroll-margin-top: 5.05em;
+    }
+
+    h3 {
+        scroll-margin-top: 5.05em;
+    }
+
+    #content-section {
+        margin-left: 2em;
+        margin-right: 2em;
+        padding-top: 5.2em;
+    }
+
+    #image-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #hamburger-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bolder;
+        padding: 0.6em;
+        margin: unset;
+    }
+
+    #ham-toggle:checked ~ .navstack {
+        display: block;
+    }
+
+    .navstack {
+        display: none;
+        padding-bottom: 0.3em;
+    }
+
+   #side-nav {
+       padding: unset;
+   }
+
+   #nav-container {
+       position: fixed;
+       padding-bottom: unset;
+   }
+
+}
+
+@media only screen and (max-width: 768px) {
+    figure.gallery-figure {
+        margin-bottom: 2em !important;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    article.slide:not(.nonadaptive) {
+        padding: 5em 1.88vmin 1.88vmin 1.88vmin !important;
+    }
+
+    article.slide:not(.nonadaptive)>header:first-of-type {
+        position: unset;
+    }
+
+}
