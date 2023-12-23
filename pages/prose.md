@@ -11,7 +11,7 @@ these writings beneficial, literally share the word(s)!
 ## [Blog](/prose/blog)
 
 My blog will be used for broadcasting updates on my life. This is in contrast
-to *serious prose* which will be left for essays.
+to *"serious prose"* which will be left for essays.
 
 `(inject '(hr))`
 
@@ -25,12 +25,11 @@ On the other hand, increased life experience will likely discover gaps,
 loopholes, and mistakes in my logic that will debunk many of the conclusions I
 write about.
 
-In other words, I will be wrong about many things I write, even if only
-temporarily. But these are necessary steps in a journey towards uncovering more
-truths. This may come off as untrustworthy and inconsistent, but alas, humans
-are mere blobs of flesh that only learn from failures and mistakes. I'd like to
-be bold and later found wrong rather than be conservative and state the
-obvious.
+In other words, I will be wrong about many things I write temporarily or not.
+But these are necessary steps in a journey towards uncovering more truths. This
+may come off as untrustworthy and inconsistent, but alas, humans are mere blobs
+of flesh that only learn from failures and mistakes. I'd like to be bold and
+later found wrong rather than be conservative and state the obvious.
 
 `(inject '(hr))`
 

@@ -7,7 +7,7 @@ I am a student and creator with interests interspersed between math, computing,
 design, and visual arts. My background is non-traditional with most of my
 skills, knowledge, and expertise coming from self-study and working on several
 personal projects. I began unschooling halfway through secondary school and am
-not currently associated with academic institutions.
+currently not associated with an academic institution.
 
 `(inject '(hr))`
 
@@ -24,8 +24,8 @@ another was a qualification to the American Invitational Math Examination
 Unfortunately, I only had two shots at these contests due to age restrictions
 (I wish I had known about them earlier!), but I had a lot of fun preparing for
 and participating in them. Through these contests, I learned the art of
-problem-solving—a skill requiring carving new paths in the face of apparent
-dead ends.
+problem-solving—a skill that requires inventing new paths in the face of
+apparent dead ends.
 
 I also gained a love of solving what are known as 'Olympiad`(sidenote "The
 Olympiad culture has a rich and deep history dating back to East Europe in the
@@ -46,7 +46,7 @@ worked on/been working on several [projects](/cs/software.html), the most
 significant of which is a web application called
 [Zedigo](/cs/software.html#zedigo). My language of choice is Lisp,
 with Javascript being my arch-nemesis. Unfortunately, JS is something I'm
-forced upon`(sidenote "Undoubtedly, Javascript's biggest strength lies outside
+forced upon`(sidenote "Javascript's biggest strength arguably lies outside
 the language specification itself: its ginormous ecosystem.")` because Zedigo
 requires a highly interactive front-end (although Typescript can make DX
 significantly better). I use Vim for most of my editing, but switch to Emacs
@@ -80,9 +80,9 @@ upon grounded principles. Most of the improvements in animation you see
 [here](/art#animation) come directly from grokking those principles.
 
 Interestingly, these learnings have also contributed to my ability to design.
-For example, being aware of silhouettes helps me draw characters that "read
-clearly," as much as design memorable logos and posters. Emphasizing
-three-dimensional depth makes both drawings and designs more interesting to
+For example, being aware of silhouettes helps in drawing characters that "read
+clearly," as well as in designing memorable logos and posters. Emphasizing
+three-dimensional space makes both drawings and designs more interesting to
 look at.
 
 `(inject '(hr))`
@@ -94,8 +94,8 @@ notions and intuitions I start to become aware of. These take the form of
 [essays](/prose/essay). These essays are not designed to persuade but are
 written in an attempt to understand something. As such, my essays try to stay
 more in line with the original notion of an 'essay': a term originating from
-the French 'essayer' meaning 'to try'. My inspiration for how I write mainly
-comes from people whose [writings](/prose#greats) have contributed to my current
+the French 'essayer' meaning 'to try'. My inspiration for writing mainly comes
+from people whose [writings](/prose#greats) have contributed to my current
 worldview.
 
 Contrary to essays, I also decided to start a [blog](/prose/blog). These are

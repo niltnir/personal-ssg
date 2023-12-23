@@ -187,7 +187,7 @@
                        (autoplay "0") (autostart "0") 
                        (allowfullscreen "true") (loading "lazy")))
            `(img (@ (src ,(img-url path)) (alt ,caption) 
-                    (style "height: auto; object-fit: contain;") 
+                    (style "width: auto; height: auto; object-fit: contain;") 
                     (loading "lazy")))))
 
        (define* (slide-view slide index)

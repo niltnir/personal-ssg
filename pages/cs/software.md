@@ -4,7 +4,7 @@ title: Software Projects
 # Software Projects
 
 I have plans to release the source for most of the projects listed here, but
-for now, some of these are closed for one reason or another.
+for now, some of these may be closed for one reason or another.
 
 `(inject '(hr))`
 
@@ -59,8 +59,8 @@ Put more concisely and bluntly,
 
 > We, indies, want to make anime!
 
-I decided to take this project in another direction, so it may (or
-may not) come back as something different.
+We decided to take this project in another direction, so it will likely come
+back as something different.
 
 `(inject '(hr))`
 

@@ -20,29 +20,29 @@ Now, onto my rant.
 
 I like anime where characters are unique and iconic. For me, it is an even
 bigger win if that uniqueness is represented directly in the character
-animation. This certainly does not mean it has to be popular.
+animation. This certainly does not mean the show has to be popular.
 
 My current favorites are Miyazaki films, shows produced by Kyoto Animation
 (especially in the early 2000s), and shows directed by Yuasa. There are many
 others I love as well and for mostly the same sort of reasons.
 
-My current position on fiction is to 'prioritize characters over story.' From
+My current position on fiction is to *prioritize characters over story.* From
 this view, if the characters and the relationships between them are
 well-designed, there will be plenty of opportunities to extend the narrative. I
 find that fiction that focuses too extensively on the story and not enough on
 its characters tends to fall flat after a few story arcs. Works where the
-characters are more 'iconic' seem to work regardless of whether a particular
+characters are more "iconic" seem to work regardless of whether a particular
 narrative exists. For example, the narrative premise of *Tom & Jerry* never
 changes, but the show is entertaining to watch. This quality is also true with
-other 'classic' shows (animated or not) and watchable slice-of-life anime such
+other "classic" shows (animated or not) and watchable slice-of-life anime such
 as *K-On!* and *Nichijou*.
 
 For me, at least, interesting characters with weak narratives often seem to
 work better than boring characters with strong narratives. I can't get around
 narratives with forgettable characters. However, this may be a matter of
-personal preference.`(sidenote "Another view is that characters and stories are
+personal preference`(sidenote "Another view is that characters and stories are
 like chicken and egg. Interesting characters generate an enthralling narrative
-which develops the characters which generates a deeper story…")` There seem to
+which develops the characters which generates a deeper story…")`. There seem to
 be enough people who despise some of the shows I listed above.
 
 On the other hand, I don't think there is anything wrong with having a strong
@@ -85,4 +85,4 @@ I've never done a real-life escape room or a puzzle hunt, but I am curious.
   watching others play them.")` (e.g., Visual Novels, Free "JRPG"s)
 - Conway's Game of Life
 
-A game I'm really interested in learning is Go.
+A game I'm interested in learning is Go.

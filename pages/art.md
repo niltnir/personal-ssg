@@ -50,17 +50,16 @@ inadvertently been swept into the digital world.
 ## Digital Artworks
 
 I started digital painting around the same time I got into drawing 2D
-characters. Since then, I've mostly been sketching stuff up from my
-imagination. The works below are therefore abstract (with some more abstract
-than others).
+characters. Since then, I've mostly been sketching stuff from my imagination.
+The works below are therefore abstract (with some more abstract than others).
 
-In terms of software usage, I wish I could say I didn't use proprietary
-software, but I usually end up submitting myself to at least one
-of the following: Photoshop, Clip Studio Paint, and Medibang Paint. Nowadays, I
-use Linux almost exclusively, and sadly, none of these are even
-installable`(sidenote "Using Wine feels like a kludge to me.")`. As you can
-imagine, I am still looking for clean, open-source solutions. I might play
-around with GIMP and Inkscape, or maybe even try hacking up my own system.
+In terms of software usage, I wish I could say that I didn't use proprietary
+software, but I end up submitting myself to at least one of the following:
+Photoshop, Clip Studio Paint, and Medibang Paint. Nowadays, I use Linux almost
+exclusively, and sadly, none of these are even installable`(sidenote "Using
+Wine feels like a kludge to me.")`. As you can imagine, I am still looking for
+clean, open-source solutions. I might play around with Krita, GIMP, and
+Inkscape, and maybe even try hacking something up on my own.
 
 `(gallery (slide "creations/artworks/digital/asd.png" "(2019) A Snow Day"
                  "" "")
@@ -221,8 +220,8 @@ storyboards there will be :-)
 `(inject '(hr (@ (class "gap"))))`
 
 ### (2021) The Door
-This is an abandoned Lambdus project. Nonetheless, here is my noobie attempt at
-storyboarding:
+This is an abandoned [Lambdus](/misc/lambdus.html) project. Nonetheless, here is my
+noobie attempt at storyboarding:
 `(gallery "creations/lambdus/storyboard")`
 
 `(inject '(hr))`
