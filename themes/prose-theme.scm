@@ -65,7 +65,7 @@
                     (div (@ (style "margin-bottom: .4em; margin-top: .4em"))
                          ,(first-paragraph post))
                     (a (@ (href ,uri)) "read more ➤"))))
-          posts)))
+          (posts/reverse-chronological posts))))
 
 (define (post-template post)
   "Return the SHTML for POST's contents."
