@@ -43,27 +43,27 @@ Something I used to do for fun was translate Japanese math videos into
 English. These are all the videos listed by channel:
 
 **Masaki Koga:**
-- [What Research Fields Are There in Math? I Drew Out a Map of Mathematics!](https://yewtu.be/watch?v=fK_JGVti5y8)
+- [What Research Fields Are There in Math? I Drew Out a Map of Mathematics!](https://invidious.slipfox.xyz/watch?v=fK_JGVti5y8)
 
 **Shikihenkei Channel (Hideki Goya):**
-- [Uniform Convergence Quiz](https://yewtu.be/watch?v=GiyGHjFV5DM)
-- [Proof of the Pythagorean Theorem](https://yewtu.be/watch?v=eOTulYHIrp4)
-- [Math in English](https://yewtu.be/watch?v=NPCOS8OWh4M)`(sidenote
+- [Uniform Convergence Quiz](https://invidious.slipfox.xyz/watch?v=GiyGHjFV5DM)
+- [Proof of the Pythagorean Theorem](https://invidious.slipfox.xyz/watch?v=eOTulYHIrp4)
+- [Math in English](https://invidious.slipfox.xyz/watch?v=NPCOS8OWh4M)`(sidenote
   "This isn't a translation, but me explaining English math terms to
   Goya-san.")`
 
 **Akito no Tokuiten:**
-- [Gotta Talk About Catalan Numbers 1](https://yewtu.be/watch?v=M1vguNredYs)
-- [Gotta Talk About Catalan Numbers 2](https://yewtu.be/watch?v=oBP22EV-Aug)
-- [Find the Pigeons](https://yewtu.be/watch?v=9RoG3gEXz-s)
-- [I Wanna be a Number Theory Master! 1](https://yewtu.be/watch?v=Z6oF_MWwsD4)
-- [I Wanna be a Number Theory Master! 2](https://yewtu.be/watch?v=wvwKJcF_4y4)
-- [I Wanna be a Number Theory Master! 3](https://yewtu.be/watch?v=mFWjKsl67Wo)
-- [I Wanna be a Number Theory Master! 4](https://yewtu.be/watch?v=2THE3AwqrLU)
-- [I Wanna be a Number Theory Master! 5](https://yewtu.be/watch?v=ZAaeW03jZcg)
-- [I Wanna be a Number Theory Master! 6](https://yewtu.be/watch?v=wrPsgeJxZ2o)
-- [I Wanna be a Number Theory Master! 7](https://yewtu.be/watch?v=gAgfLGKLR8U)
-- [I Wanna be a Number Theory Master! 8](https://yewtu.be/watch?v=Relem3z_Yo0)
-- [I Wanna be a Number Theory Master! 9](https://yewtu.be/watch?v=nen7p0F2NR8)
-- [I Wanna be a Number Theory Master! 10](https://yewtu.be/watch?v=iuJmkDbs0j8)
+- [Gotta Talk About Catalan Numbers 1](https://invidious.slipfox.xyz/watch?v=M1vguNredYs)
+- [Gotta Talk About Catalan Numbers 2](https://invidious.slipfox.xyz/watch?v=oBP22EV-Aug)
+- [Find the Pigeons](https://invidious.slipfox.xyz/watch?v=9RoG3gEXz-s)
+- [I Wanna be a Number Theory Master! 1](https://invidious.slipfox.xyz/watch?v=Z6oF_MWwsD4)
+- [I Wanna be a Number Theory Master! 2](https://invidious.slipfox.xyz/watch?v=wvwKJcF_4y4)
+- [I Wanna be a Number Theory Master! 3](https://invidious.slipfox.xyz/watch?v=mFWjKsl67Wo)
+- [I Wanna be a Number Theory Master! 4](https://invidious.slipfox.xyz/watch?v=2THE3AwqrLU)
+- [I Wanna be a Number Theory Master! 5](https://invidious.slipfox.xyz/watch?v=ZAaeW03jZcg)
+- [I Wanna be a Number Theory Master! 6](https://invidious.slipfox.xyz/watch?v=wrPsgeJxZ2o)
+- [I Wanna be a Number Theory Master! 7](https://invidious.slipfox.xyz/watch?v=gAgfLGKLR8U)
+- [I Wanna be a Number Theory Master! 8](https://invidious.slipfox.xyz/watch?v=Relem3z_Yo0)
+- [I Wanna be a Number Theory Master! 9](https://invidious.slipfox.xyz/watch?v=nen7p0F2NR8)
+- [I Wanna be a Number Theory Master! 10](https://invidious.slipfox.xyz/watch?v=iuJmkDbs0j8)
 

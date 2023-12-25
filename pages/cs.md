@@ -6,7 +6,7 @@ title: Computing & Software
 Yes, you read that right, 'CS' stands for computing & software`(sidenote "As
 Abelson and Sussman remark in the introduction to SICP, 'computer science' is a
 misnomer in the sense that the field is not a science and has almost nothing to
-do with computers … with the exception of low-level software, robotics, machine
+do with computers… with the exception of low-level software, robotics, machine
 learning, etc.")`.
 
 Here is where I get to nerd out about, say, interpreters.
@@ -30,8 +30,8 @@ agony, I have discovered many ways to get around this issue.
 5. WASM???
 
 My current take is to resort to Javascript if and only if I need a lot of
-control over some unique piece of interactive interface (e.g., a drawing canvas)
-. Even then, depending on the complexity of the interface, I will probably
+control over some unique piece of interactive interface (e.g., a drawing canvas).
+Even then, depending on the complexity of the interface, I will probably
 rely on technologies such as Svelte and Typescript.
 
 Aside from the web, I eventually want to dip my toes into more low-level stuff.
