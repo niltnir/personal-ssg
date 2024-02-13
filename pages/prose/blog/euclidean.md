@@ -18,10 +18,10 @@ quite odd for me to suddenly crave for geometry. Perhaps the appeal was the
 pretty diagrams I got to draw with compass and straightedge. I admit, there is
 a certain meditative quality in patiently turning words into pictures.
 
-As I slowly made way through the book, propositions, theorems, and lemmas flew
-onto sheets of paper. And as I got acquainted with these objects, I started
-solving some exercises. Soon I was craving to get past the theory to dive
-straight into the wild west of exhilarating problems.
+Anyways, I made my way through the book and got acquainted with propositions,
+theorems, and lemmas as I worked them out on sheets of paper. Eventually I
+started solving some exercises, and soon I was craving to get past the theory
+to dive right into the wild west of exhilarating problems.
 
 One fun problem`(sidenote "The solution can be found elsewhere. If motivation
 permits, I will post the solution on this site.")` I was immediately confronted
@@ -35,13 +35,13 @@ The beauty of Euclidean geometry lies in its simple character. There are no
 crazy equations`(sidenote "With the exceptions of rectilinear coordinates,
 complex numbers, barycentric coordinates, linear algebra, etc.")`, no confusing
 objects, no fancy notation, yet results are often astonishing. It's no wonder
-that geometry is called the **king** of mathematics. I guess in this sense,
-it's closer to the elegance of discrete math than it is to, say, algebra or
-analysis.
+that geometry is called the **king** of mathematics. And strangely, the process
+of exploring and solving problems synthetically can often feel closer to
+attempting a problem in discrete math than analysis.
 
 Unfortunately, geometry gets a bad rap in conventional education and other
 academic institutions. It's often written off as "useless" and "trivial" by
-many. In fact, Euclidean geometry is a dead topic among professional
+many. In fact, Euclidean geometry is a dead topic among *most* professional
 mathematicians despite its historical origins. In a way though, the field is a
 hidden gem—detached from the world, only showing itself to those who seek it.
 
@@ -56,7 +56,7 @@ it only worsens my ever-increasing queue of "math to convert to LaTeX".
 Diagrams are also more tedious because it requires additional tools like
 Asymptote.
 
-Nonetheless, geometry has a new place in my heart. Gone are the days of *yet
+Nonetheless, geometry has a new place in my heart. Gone are the days of *just
 another find the length problem*. It's a field where more of its magic is
 revealed to you the deeper you go. But go too far, and you'll start looking for
 concyclic points in stars and raindrops.`(sidenote "This is the famous Tetris

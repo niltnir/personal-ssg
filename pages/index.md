@@ -18,20 +18,20 @@ school. I probably learned more math in those years than in all prior
 years of schooling combined. At some point, I received a few 'awards' for
 performance. One was a performance of distinction at the Canadian Open
 Mathematics Challenge ([COMC](https://cms.math.ca/competitions/comc/)), and
-another was a qualification to the American Invitational Math Examination
-([AIME](https://maa.org/math-competitions/american-invitational-mathematics-examination-aime)).
+another was a qualification to the American Invitational Mathematics Examination
+([AIME](https://en.wikipedia.org/wiki/American_Invitational_Mathematics_Examination)).
 
 Unfortunately, I only had two shots at these contests due to age restrictions
 (I wish I had known about them earlier!), but I had a lot of fun preparing for
 and participating in them. Through these contests, I learned the art of
-problem-solving—a skill that requires inventing new paths in the face of
-apparent dead ends.
+problem-solving—a skill requiring inventing new paths in the face of apparent
+dead ends.
 
-I also gained a love of solving what are known as 'Olympiad`(sidenote "The
+I also gained a love of solving what are known as *Olympiad*`(sidenote "The
 Olympiad culture has a rich and deep history dating back to East Europe in the
-early 20th century.")` problems': difficult proof problems whose essay-format
-solutions require clever insights. My favorite problems are in number theory
-and combinatorics.
+early 20th century.")` problems: difficult proof problems whose essay-format
+solutions require deep and clever insights. My favorite problems are in number
+theory and combinatorics.
 
 More recently, I've started diving into areas of higher math, one of which is
 real analysis. I may start linking [notes](/math#mathnotes) as I learn new

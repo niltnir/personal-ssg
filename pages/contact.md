@@ -19,4 +19,4 @@ will not respond for the simple reason that I do not actively check them.
 These accounts are meant more for archive purposes.
 
 - **Twitter:** [@niltnir](https://nitter.net/niltnir)
-- **Lambdus Youtube:** [@lambdus_](https://invidious.slipfox.xyz/channel/UCblZhI-BOumGXwJYQ97OmNw)
+- **Lambdus Youtube:** [@lambdus_](https://yewtu.be/channel/UCblZhI-BOumGXwJYQ97OmNw)

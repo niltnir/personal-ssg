@@ -237,11 +237,11 @@ be able to render something to video.
 
 In the meantime, check out some shorts I made:
 
-`(gallery (slide "https://invidious.slipfox.xyz/embed/UbmIlrCGiMQ?autoplay=0&autostart=0"
+`(gallery (slide "https://yewtu.be/embed/UbmIlrCGiMQ?autoplay=0&autostart=0"
                  "(2022) test.mp4"
                  "My first real attempt at character animation"
                  "")
-          (slide "https://invidious.slipfox.xyz/embed/ioiQ6UllyK8?autoplay=0&autostart=0"
+          (slide "https://yewtu.be/embed/ioiQ6UllyK8?autoplay=0&autostart=0"
                  "(2022) Jumping on an Elevator"
                  "What if you jump?"
                  "This short was made in collaboration with Sean Zhang. I voiced

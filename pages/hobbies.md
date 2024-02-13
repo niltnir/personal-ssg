@@ -18,9 +18,11 @@ I've been watching.
 
 Now, onto my rant.
 
-I like anime where characters are unique and iconic. For me, it is an even
-bigger win if that uniqueness is represented directly in the character
-animation. This certainly does not mean the show has to be popular.
+I like anime where characters are unique and iconic. This certainly does not
+mean the show has to be popular. In particular, one thing I look for is whether
+the essence of each character is represented directly in their
+animation/movement. If you watch carefully enough, you'll realize that this
+quality is actually quite rare among television productions.
 
 My current favorites are Miyazaki films, shows produced by Kyoto Animation
 (especially in the early 2000s), and shows directed by Yuasa. There are many

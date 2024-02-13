@@ -84,8 +84,8 @@ of figuring it out.
 
 Because I made the game for a [Japanese content creator](https://okimath.com), there
 are corresponding videos for the
-[problem](https://invidious.slipfox.xyz/watch?v=UdLtG_SBymA) and
-[solution](https://invidious.slipfox.xyz/watch?v=zagKmjLQaw0) in Japanese.
+[problem](https://yewtu.be/watch?v=UdLtG_SBymA) and
+[solution](https://yewtu.be/watch?v=zagKmjLQaw0) in Japanese.
 
 `(inject '(hr))`
 
@@ -100,8 +100,8 @@ desktop version in Java`(sidenote "I know I have come far when reading the last
 phrase of the sentence makes me cringe a little on the inside.")`.
 
 Demos were made for the tool in Japanese by [Hideki Goya](https://okimath.com).
-[Here](https://invidious.slipfox.xyz/watch?v=AIcyNUiSj-4) is the video explaining
-installation and usage, and [here](https://invidious.slipfox.xyz/watch?v=XK35WThF9oo) is a
+[Here](https://yewtu.be/watch?v=AIcyNUiSj-4) is the video explaining
+installation and usage, and [here](https://yewtu.be/watch?v=XK35WThF9oo) is a
 video edited using Autoclip.
 
 Unfortunately, despite the demo above, the project is currently unmaintained,

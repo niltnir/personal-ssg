@@ -15,7 +15,7 @@
 ;;; You should have received a copy of the GNU General Public License
 ;;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-(define-module (themes prose-theme)
+(define-module (themes posts-theme)
   #:use-module (srfi srfi-9)
   #:use-module (srfi srfi-19)
   #:use-module (utils external)
@@ -23,14 +23,14 @@
   #:use-module (haunt post)
   #:use-module (haunt builder blog)
   #:use-module (themes layouts main-layout)
-  #:export (prose-theme))
+  #:export (posts-theme))
 
 (define (first-paragraph post)
     (or (car (filter (lambda (node) (equal? 'p (car node))) (post-sxml post)))
         ""))
 
 ;;; FEED
-(define %feed-prefix "/feeds/tags")
+(define %feed-prefix "/feeds/tags") ; Broken feed prefix for oly tags
 
 (define %rss-icon 
   "https://upload.wikimedia.org/wikipedia/commons/2/20/Cib-rss_%28CoreUI_Icons_v1.0.0%29.svg")
@@ -51,21 +51,24 @@
          ", ")))
 
 ;;; TEMPLATES
-(define (collection-template site title posts basename)
-  `((div (@ (class "align-vertical"))
-      (h1 ,title)
-      (a (@ (href ,(string-append "/feeds/" basename ".xml"))
-            (class "align-vertical") (style "margin-left: auto;"))
-         (img (@ (src ,%rss-icon) (class "icon")))))
-    ,(map (lambda (post)
-            (let ((uri (post-uri site post (string-append "/prose/" basename))))
-              `(div (hr (@ (class "prose")))
+(define (collection-template posts-path)
+  (lambda (site title posts basename)
+    `((div (@ (class "align-vertical"))
+           (h1 ,title)
+           (a (@ (href ,(string-append "/feeds/" basename ".xml"))
+                 (class "align-vertical") (style "margin-left: auto;"))
+              (img (@ (src ,%rss-icon) (class "icon")))))
+      ,(map (lambda (post)
+            (format #t "Path: ~a~%" posts-path)
+            (format #t "Basename: ~a~%" basename)
+            (let ((uri (post-uri site post (string-append "/" posts-path))))
+              `(div (hr (@ (class "posts")))
                     (h2 (@ (style "margin-bottom: .1em;"))  (a (@ (href ,uri)) ,(post-ref post 'title)))
                     ,@(post-metadata post) 
                     (div (@ (style "margin-bottom: .4em; margin-top: .4em"))
                          ,(first-paragraph post))
                     (a (@ (href ,uri)) "read more ➤"))))
-          (posts/reverse-chronological posts))))
+            (posts/reverse-chronological posts)))))
 
 (define (post-template post)
   "Return the SHTML for POST's contents."
@@ -74,9 +77,9 @@
     (hr)
     (article ,(post-sxml post))))
 
-(define* prose-theme
+(define* (posts-theme posts-path)
   (theme
-    #:name "Prose"
+    #:name "Posts"
     #:layout (main-layout)
-    #:collection-template collection-template
+    #:collection-template (collection-template posts-path)
     #:post-template post-template))

@@ -15,7 +15,7 @@
 ;;; You should have received a copy of the GNU General Public License
 ;;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-(define-module (builders prose)
+(define-module (builders posts)
   #:use-module (extension)
   #:use-module (utils filesys)
   #:use-module (haunt artifact)
@@ -25,8 +25,8 @@
   #:use-module (haunt html)
   #:use-module (haunt reader)
   #:use-module (haunt reader commonmark)
-  #:use-module (themes prose-theme)
-  #:export (prose))
+  #:use-module (themes posts-theme)
+  #:export (posts))
 
 (define (make-index theme site title posts destination-directory)
   (serialized-artifact
@@ -34,9 +34,10 @@
     (render-collection theme site title posts (directory->basename destination-directory))
     sxml->html))
 
-(define* (prose input-directory destination-directory #:key 
+(define* (posts input-directory destination-directory #:key 
                (title (directory->title destination-directory)) (reader commonmark-reader))
-  (let ((articles (directory->posts input-directory)))
+  (let ((articles (directory->posts input-directory))
+        (prose-theme (posts-theme destination-directory)))
     (lambda (site posts)
       (append (list (make-index prose-theme site title articles destination-directory))
               (map (lambda (post) 

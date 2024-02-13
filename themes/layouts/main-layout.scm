@@ -79,6 +79,7 @@
 (define title-data
   '(("About" "/" #f)
     ("Math" "/math" #f)
+    ("Olympiad Solutions" "/math/oly" #t)
     ("Computing & Software" "/cs" #f)
     ("Software Projects" "/cs/software.html" #t)
     ("Art & Design" "/art" #f)
