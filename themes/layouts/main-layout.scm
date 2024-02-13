@@ -1,6 +1,6 @@
 ;;; nodalynn.com - Personal Website of Lynn Noda
 ;;;
-;;; Copyright © 2023 Lynn Noda <lynn@nodalynn.com>
+;;; Copyright © 2023-2024 Lynn Noda <lynn@nodalynn.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -45,7 +45,7 @@
             (target "_blank") (rel "license noopener noreferrer")
             (style "display:inline-flex;"))
          "CC BY-NC-SA 4.0 International")
-      "  •  © 2023 Lynn Noda"))
+      "  •  © 2023-2024 Lynn Noda"))
 
 (define %rss-icon 
   "https://upload.wikimedia.org/wikipedia/commons/2/20/Cib-rss_%28CoreUI_Icons_v1.0.0%29.svg")

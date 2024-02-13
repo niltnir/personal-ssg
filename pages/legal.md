@@ -19,7 +19,7 @@ rest of the page, including the license terms by Creative Commons.
 
 ## License (Site Content)
 
-Copyright © 2023 Lynn Noda <lynn@nodalynn.com>
+Copyright © 2023-2024 Lynn Noda <lynn@nodalynn.com>
 
 This [website](/) is licensed under
 [CC BY-NC-SA 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1)
@@ -52,7 +52,7 @@ displayed via embedded links from external domains.
 
 ## License ([Code](https://github.com/niltnir/niltnir.github.io))
 
-Copyright © 2023 Lynn Noda <lynn@nodalynn.com>
+Copyright © 2023-2024 Lynn Noda <lynn@nodalynn.com>
 
 The site is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

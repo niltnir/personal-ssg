@@ -1,6 +1,6 @@
 ;;; nodalynn.com - Personal Website of Lynn Noda
 ;;;
-;;; Copyright © 2023 Lynn Noda <lynn@nodalynn.com>
+;;; Copyright © 2023-2024 Lynn Noda <lynn@nodalynn.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by

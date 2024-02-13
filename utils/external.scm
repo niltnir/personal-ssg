@@ -1,9 +1,9 @@
 ;;; nodalynn.com - Personal Website of Lynn Noda
 ;;;
 ;;; Copyright © 2019 - 2020 Jakob L. Kreuze <zerodaysfordays@sdf.org>
-;;; Modifications Copyright © 2023 Lynn Noda <lynn@nodalynn.com>
+;;; Modifications Copyright © 2023-2024 Lynn Noda <lynn@nodalynn.com>
 ;;;
-;;; 2023-12-01: Isolated the 'intersperse' function from the "jakob/utils"
+;;; 2023-2024-12-01: Isolated the 'intersperse' function from the "jakob/utils"
 ;;; module and the 'tag-uri' function from the "jakob/utils/tags" module into
 ;;; new "utils/external" module.
 ;;;
