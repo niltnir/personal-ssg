@@ -4,12 +4,12 @@
 ;;; Copyright © 2016 Christopher Allan Webber <cwebber@dustycloud.org>
 ;;; Modifications Copyright © 2023-2024 Lynn Noda <lynn@nodalynn.com>
 ;;;
-;;; 2023-2024-12-01: Modified 'atom-feeds' and 'atom-feeds-by-tag' to take an
+;;; 202e--12-01: Modified 'atom-feeds' and 'atom-feeds-by-tag' to take an
 ;;; optional 'input-directory' parameter specifying a path to relevant posts.
 ;;; These paths are then used to generate post objects instead of the default
 ;;; "/posts" directory.
 ;;;
-;;; 2023-2024-11-30: Removed unnecessary functions and module imports from the
+;;; 2023-11-30: Removed unnecessary functions and module imports from the
 ;;; "builder/atom" module 
 ;;;
 ;;; This file is modified from the "builder/atom" module in Haunt Static Site
@@ -82,7 +82,7 @@
                                 (enclosure-extra enclosure)))))
              (post-ref-all post 'enclosure)))))
 
-(define* (atom-feed #:optional input-directory #:key
+(define* (atom-feed #:optional input-directories #:key
                     (file-name "feed.xml")
                     (subtitle "Recent Posts")
                     (filter posts/reverse-chronological)
@@ -95,8 +95,8 @@ FILE-NAME: The page file name
 SUBTITLE: The feed subtitle
 FILTER: The procedure called to manipulate the posts list before rendering
 MAX-ENTRIES: The maximum number of posts to render in the feed"
-(lambda (site posts)
-  (let ((articles (if (string? input-directory) (directory->posts input-directory) posts))
+(lambda (site backup-posts)
+  (let ((posts (or (directories->posts input-directories) backup-posts))
         (uri (uri->string
                (build-uri (site-scheme site)
                           #:host (site-domain site)
@@ -113,10 +113,10 @@ MAX-ENTRIES: The maximum number of posts to render in the feed"
                                 (link (@ (href ,(site-domain site))))
                                 ,@(map (cut post->atom-entry site <>
                                             #:blog-prefix blog-prefix)
-                                       (take-up-to max-entries (filter articles))))
+                                       (take-up-to max-entries (filter posts))))
                          sxml->xml*))))
 
-(define* (atom-feeds-by-tag #:optional input-directory #:key
+(define* (atom-feeds-by-tag #:optional input-directories #:key
                             (prefix "feeds/tags")
                             (filter posts/reverse-chronological)
                             (max-entries 20)
@@ -127,9 +127,9 @@ used in a post.  All arguments are optional:
 PREFIX: The directory in which to write the feeds
 FILTER: The procedure called to manipulate the posts list before rendering
 MAX-ENTRIES: The maximum number of posts to render in each feed"
-(lambda (site posts)
-  (let* ((articles (if (string? input-directory) (directory->posts input-directory) posts))
-         (tag-groups (posts/group-by-tag articles)))
+(lambda (site backup-posts)
+  (let* ((posts (or (directories->posts input-directories) backup-posts))
+         (tag-groups (posts/group-by-tag posts)))
     (map (match-lambda
            ((tag . posts)
             ((atom-feed #:file-name (string-append prefix "/" tag ".xml")

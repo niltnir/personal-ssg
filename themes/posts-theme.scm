@@ -30,7 +30,7 @@
         ""))
 
 ;;; FEED
-(define %feed-prefix "/feeds/tags") ; Broken feed prefix for oly tags
+(define %feed-prefix "/feeds/tags")
 
 (define %rss-icon 
   "https://upload.wikimedia.org/wikipedia/commons/2/20/Cib-rss_%28CoreUI_Icons_v1.0.0%29.svg")
@@ -40,7 +40,7 @@
   (string-append (or prefix "") "/"
                  (site-post-slug site post) ".html"))
 
-(define (post-metadata post)
+(define (post-data post)
   `(,(date->string 
        (post-date post) "⏲ ~B ~d, ~Y")
      " ｜ 🏷 Tags: "
@@ -59,12 +59,10 @@
                  (class "align-vertical") (style "margin-left: auto;"))
               (img (@ (src ,%rss-icon) (class "icon")))))
       ,(map (lambda (post)
-            (format #t "Path: ~a~%" posts-path)
-            (format #t "Basename: ~a~%" basename)
             (let ((uri (post-uri site post (string-append "/" posts-path))))
               `(div (hr (@ (class "posts")))
                     (h2 (@ (style "margin-bottom: .1em;"))  (a (@ (href ,uri)) ,(post-ref post 'title)))
-                    ,@(post-metadata post) 
+                    ,@(post-data post) 
                     (div (@ (style "margin-bottom: .4em; margin-top: .4em"))
                          ,(first-paragraph post))
                     (a (@ (href ,uri)) "read more ➤"))))
@@ -73,7 +71,7 @@
 (define (post-template post)
   "Return the SHTML for POST's contents."
   `((h1 ,(post-ref post 'title))
-    (div (@ (class "metadata")) ,@(post-metadata post))
+    (div (@ (class "metadata")) ,@(post-data post))
     (hr)
     (article ,(post-sxml post))))
 

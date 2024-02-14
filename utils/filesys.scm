@@ -24,6 +24,7 @@
   #:export (valid-file-name 
             directory->basename
             directory->title
+            directories->posts
             directory->posts
             file-name))
 
@@ -40,6 +41,16 @@
 
 (define* (directory->posts directory #:key (readers (list commonmark-reader)))
   (read-posts directory valid-file-name readers))
+
+(define* (directories->posts directories #:key (readers (list commonmark-reader)))
+  (cond ((string? directories) (directory->posts directories))
+        ((list? directories) 
+         (apply append! 
+           (map (lambda (directory) 
+                  (format #t "Dir: ~a~%" directory)
+                  (directory->posts directory #:readers readers)) 
+                directories)))
+        (else #f)))
 
 (define (file-name site post)
   (string-append (site-post-slug site post) ".html"))
