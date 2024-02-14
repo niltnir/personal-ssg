@@ -100,7 +100,7 @@ MAX-ENTRIES: The maximum number of posts to render in the feed"
         (uri (uri->string
                (build-uri (site-scheme site)
                           #:host (site-domain site)
-                          #:path (string-append "/" file-name)))))
+                          #:path (string-append "/" file-name)))))  ;;; FIX URI AND LINK BELOW!
     (serialized-artifact file-name
                          `(feed (@ (xmlns "http://www.w3.org/2005/Atom"))
                                 (title ,(site-title site))
