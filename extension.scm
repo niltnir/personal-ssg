@@ -75,18 +75,19 @@
   (use-modules (extension))
   (if (node-list? sxml)
     (map (lambda (node) (embedded-sxml node)) sxml)
-    (let* ((tag (car sxml))
-           (attributes (if (attribute? (cadr sxml)) (cadr sxml) '()))
-           (contents (if (null? attributes) (cdr sxml) (cddr sxml))))
+    (let* ((tg (tag sxml)) (attr (attributes sxml)) (cnts (contents sxml)))
       (cond ((null? sxml) '())
-            ((and (equal? tag 'code) (null? attributes)) ; no nesting of sxml in 'code' tag
+            ((and (equal? tg 'code) (null? attr)) ; no nesting of sxml in 'code' tag
              ;; therefore contents MUST be a list of strings
-             (if (parseable-strings? contents) (eval (parsed-sexp contents) (current-module)) sxml))
+             (if (parseable-strings? cnts) (eval (parsed-sexp cnts) (current-module)) sxml))
+            ((equal? tg 'pre) ; math codeblock for KaTex
+             (let ((replacement (contents (car cnts))))
+               `(p ,@replacement)))
             (else (append
-                    (node-header tag attributes)
+                    (node-header tg attr)
                     (map (lambda (content) 
                            (if (string? content) content (embedded-sxml content)))
-                         contents)))))))
+                         cnts)))))))
 
 (define (remove-bad-p-tags sxml)
   "Within SXML, look for degenerate uses of paragraph tags and replace them

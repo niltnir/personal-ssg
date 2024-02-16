@@ -6,8 +6,8 @@ title: About
 I am a student and creator with interests interspersed between math, computing,
 design, and visual arts. My background is non-traditional with most of my
 skills, knowledge, and expertise coming from self-study and working on several
-personal projects. I began unschooling halfway through secondary school and am
-currently not associated with an academic institution.
+personal projects. I began unschooling midway through secondary school and am
+not associated with any academic institutions.
 
 `(inject '(hr))`
 
