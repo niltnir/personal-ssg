@@ -17,48 +17,49 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # ./oly "Japan 2010/4" 0
-TITLE=$0
-PROBLEM=von show $TITLE -b 0
-SOLUTION=von show $TITLE -b 1
-MOTIVATION=von show $TITLE -b 2
+TITLE=$1
+BLOCK_NUM=$2
+PROBLEM=$(python -m von show "$TITLE" -b 0)
+SOLUTION=$(python -m von show "$TITLE" -b 1)
+MOTIVATION=$(python -m von show "$TITLE" -b 2)
 FULLTEXT="${PROBLEM} ${SOLUTION} ${MOTIVATION}"
 
 make_filename () {
-    local title = $1 | tr '[:upper:]' '[:lower:]' | sed -e "s/[\/\ ]/-/g"
-    echo $title
+    echo "$TITLE $BLOCK_NUM" | tr '[:upper:]' '[:lower:]' | sed -e "s/[\/\ ]/-/g"
 }
 
-FILENAME=$(make_filename $TITLE)
+FILENAME=$(make_filename)
 
 latex_to_katexmd () {
-    local katexmd = $1 
+    local katexmd=$(echo "$1" |
     # Replace inline math dollar signs with \(\)
-    | sed -re "s/(^|[^\$])\$([^\$]+)\$([^\$]|$)/\1\\(\2\\)\3/g"
+    perl -0777 -pe 's/(^|[^\$])\$([^\$]+)\$([^\$]|$)/$1\\($2\\)$3/g' |
     # Replace display math dollar signs with \[\]
-    | sed -re "s/(^|[^\$])\$\$([^\$]+)\$\$([^\$]|$)/\1\\[\2\\]\3/g"
-    # Wrap \[\] around environments 
-    | sed -re "s/(\\begin{.*}[\s\S]*?\\end{.*})/\\[\1\\]/g"
+    perl -0777 -pe 's/(^|[^\$])\$\$([^\$]+)\$\$([^\$]|$)/$1\\[$2\\]$3/g' |
+    # # Wrap \[\] around environments 
+    perl -0777 -pe 's/(\\begin{.*}[\s\S]*?\\end{.*})/\\[\1\\]/g')
     echo $katexmd
 }
 
 write_md () {
-    local text = $1
-    mkdir -p ../temp/.olytemp/
-    cd ../temp/.olytemp/
-    printf $text > "$FILENAME".md
+    local text="$1"
+    mkdir -p ../.temp/oly/
+    cd ../.temp/oly/
+    echo "Writing to $FILENAME.md..."
+    echo "$text" > "$FILENAME".md
 }
 
 OUT=""
-if [ $1 == 0 ]; then
-    OUT=$(latex_to_katexmd $PROBLEM)
-elif [ $1 == 1 ]; then 
-    OUT=$(latex_to_katexmd $SOLUTION)
-elif [ $1 == 2 ]; then
-    OUT=$(latex_to_katexmd $MOTIVATION)
+if [ "$BLOCK_NUM" == 0 ]; then
+    OUT=$(latex_to_katexmd "$PROBLEM")
+elif [ "$BLOCK_NUM" == 1 ]; then 
+    OUT=$(latex_to_katexmd "$SOLUTION")
+elif [ "$BLOCK_NUM" == 2 ]; then
+    OUT=$(latex_to_katexmd "$MOTIVATION")
 else 
-    OUT=$(latex_to_katexmd $FULLTEXT)
+    OUT=$(latex_to_katexmd "$FULLTEXT")
 fi
 
-write_md $OUT
-echo $OUT
+write_md "$OUT"
+# echo "$OUT"
 exit 0
