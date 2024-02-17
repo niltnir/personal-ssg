@@ -30,34 +30,34 @@ make_filename () {
 
 FILENAME=$(make_filename)
 
-latex_to_katexmd () {
-    local katexmd=$(echo "$1" |
+latex_to_katex () {
+    local katex=$(echo "$1" |
     # Replace inline math dollar signs with \(\)
     perl -0777 -pe 's/(^|[^\$])\$([^\$]+)\$([^\$]|$)/$1\\($2\\)$3/g' |
     # Replace display math dollar signs with \[\]
     perl -0777 -pe 's/(^|[^\$])\$\$([^\$]+)\$\$([^\$]|$)/$1\\[$2\\]$3/g' |
     # # Wrap \[\] around environments 
     perl -0777 -pe 's/(\\begin{.*}[\s\S]*?\\end{.*})/\\[\1\\]/g')
-    echo $katexmd
+    echo $katex
 }
 
 write_md () {
     local text="$1"
-    mkdir -p ../.temp/oly/
-    cd ../.temp/oly/
+    mkdir -p ../.tmp/oly/
+    cd ../.tmp/oly/
     echo "Writing to $FILENAME.md..."
     echo "$text" > "$FILENAME".md
 }
 
 OUT=""
 if [ "$BLOCK_NUM" == 0 ]; then
-    OUT=$(latex_to_katexmd "$PROBLEM")
+    OUT=$(latex_to_katex "$PROBLEM")
 elif [ "$BLOCK_NUM" == 1 ]; then 
-    OUT=$(latex_to_katexmd "$SOLUTION")
+    OUT=$(latex_to_katex "$SOLUTION")
 elif [ "$BLOCK_NUM" == 2 ]; then
-    OUT=$(latex_to_katexmd "$MOTIVATION")
+    OUT=$(latex_to_katex "$MOTIVATION")
 else 
-    OUT=$(latex_to_katexmd "$FULLTEXT")
+    OUT=$(latex_to_katex "$FULLTEXT")
 fi
 
 write_md "$OUT"

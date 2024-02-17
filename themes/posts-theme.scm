@@ -26,8 +26,8 @@
   #:export (posts-theme))
 
 (define (first-paragraph post)
-    (or (car (filter (lambda (node) (equal? 'p (car node))) (post-sxml post)))
-        ""))
+  (or (car (filter (lambda (node) (equal? 'p (car node))) (post-sxml post)))
+      ""))
 
 ;;; FEED
 (define %feed-prefix "/feeds/tags")

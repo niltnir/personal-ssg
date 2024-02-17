@@ -16,7 +16,7 @@
 ;;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 (define-module (builders posts)
-  #:use-module (extension)
+  ; #:use-module (extension)
   #:use-module (utils filesys)
   #:use-module (haunt artifact)
   #:use-module (haunt site)
@@ -29,6 +29,7 @@
   #:export (posts))
 
 (define (make-index theme site title posts destination-directory)
+  ;; issue is inside code below
   (serialized-artifact
     (string-append destination-directory "/index.html")
     (render-collection theme site title posts (directory->basename destination-directory))
@@ -37,13 +38,14 @@
 (define* (posts input-directory destination-directory #:key 
                (title (directory->title destination-directory)) (reader commonmark-reader))
   (let ((articles (directory->posts input-directory))
-        (prose-theme (posts-theme destination-directory)))
+        (post-theme (posts-theme destination-directory)))
     (lambda (site posts)
-      (append (list (make-index prose-theme site title articles destination-directory))
+      (append (list (make-index post-theme site title articles destination-directory))
               (map (lambda (post) 
                      (serialized-artifact
                        (string-append destination-directory "/"
                                       (file-name site post))
-                       (render-post prose-theme site (extended-post post))
+                       ; (render-post post-theme site (extended-post post))
+                       (render-post post-theme site post)
                        sxml->html))
                    articles)))))

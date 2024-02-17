@@ -1,9 +1,9 @@
-title: Japan 2010/4
+title: Math Block
 date: 2024-02-14 01:32
 tags: math, olympiad, inequality
 ---
 
-## Degree-2 Fractional Inequality
+## A Cyclic Fractional Inequality
 
 ```math
 Let \( x,\ y,\ z\) be positive real numbers. Prove that \[ \frac {1 + yz +

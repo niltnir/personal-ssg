@@ -20,8 +20,9 @@
   #:use-module (srfi srfi-9)
   #:use-module (srfi srfi-19)
   #:use-module (ice-9 ftw)
+  #:use-module (ice-9 textual-ports)
   #:use-module (haunt post)
-  #:export (extended-post inject sidenote gallery slide))
+  #:export (extended-post inject sidenote gallery slide oly))
 
 ;;; PATHS AND LINKS
 (define img-path (string-append (getcwd) "/images/"))
@@ -29,9 +30,11 @@
 (define (img-url rest-of-path)
   (string-append "/images/" rest-of-path))
 
+(define oly-path (string-append (getcwd) "/.tmp/oly/"))
+
 ;;; MARKDOWN EXTENSION HACK
 (define extensions
-  (list "inject" "sidenote" "gallery"))
+  (list "inject" "sidenote" "gallery" "oly"))
 
 (define extension-prefixes
   (map (lambda (extension-string) (string-append "(" extension-string)) extensions))
@@ -75,20 +78,25 @@
   (use-modules (extension))
   (if (node-list? sxml)
     (map (lambda (node) (embedded-sxml node)) sxml)
-    (let* ((tg (tag sxml)) (attr (attributes sxml)) (cnts (contents sxml)))
+    (let* ((tg (tag sxml)) (attr (attributes sxml)) (cntnts (contents sxml)))
       (cond ((null? sxml) '())
             ((and (equal? tg 'code) (null? attr)) ; no nesting of sxml in 'code' tag
              ;; therefore contents MUST be a list of strings
-             (if (parseable-strings? cnts) (eval (parsed-sexp cnts) (current-module)) sxml))
+             (if (parseable-strings? cntnts) (eval (parsed-sexp cntnts) (current-module)) sxml))
             ((equal? tg 'pre) ; math codeblock for KaTex
-             (let ((replacement (contents (car cnts))))
+             (let ((replacement (contents (car cntnts))))
                `(p ,@replacement)))
             (else (append
                     (node-header tg attr)
                     (map (lambda (content) 
                            (if (string? content) content (embedded-sxml content)))
-                         cnts)))))))
+                         cntnts)))))))
 
+;; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! FIX !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+;; the random ((evaled node p "blah blah blah")) in the output sxml is because
+;; initially, the code used to look like 
+;; (p (code "(oly \"japan-2010-4\" 0)"))
+;; and the initial 'p' is replaced by its contents but keeps the nesting...
 (define (remove-bad-p-tags sxml)
   "Within SXML, look for degenerate uses of paragraph tags and replace them
   with their contents. So far, these include p tags that only contain a single
@@ -97,7 +105,7 @@
         ((node-list? sxml) (map (lambda (node) (remove-bad-p-tags node)) sxml))
         ((and (equal? (tag sxml) 'p) (null? (attributes sxml)) 
               (= (length (contents sxml)) 1) (list? (car (contents sxml))))
-         (contents sxml))
+         (car (contents sxml)))
         ((or (equal? (tag sxml) 'li) (equal? (tag sxml) 'blockquote))
          (let ((new-content (accumulate 
                               (lambda (content accum) 
@@ -139,7 +147,7 @@
   (filter (lambda (name) (and (string-any #\. name) (not (string-every #\. name)))) names))
 
 (define (directory-files directory-path)
-  (scandir (string-append  img-path directory-path)))
+  (scandir (string-append img-path directory-path)))
 
 (define (img-names->img-paths directory-path img-names)
   (map (lambda (name) (string-append directory-path "/" name)) img-names))
@@ -218,4 +226,18 @@
                           `(a (@ (href ,(slide-hash index)) (class "gallery button")) ,link-label)))
                      slides))
              ,@(index-map (lambda (slide index) (slide-view slide index)) slides))))))
+
+;;; MATH
+; `(oly "japan-2010-4" 0)` 
+(define (oly title block-index)
+  ;title is a string of the form "contest-year-number"
+  (let* ((filename (string-append 
+                    oly-path title "-" (number->string block-index) ".md"))
+         (port (open-input-file filename))
+         (textblock (get-string-all port)))
+         (close-port port)
+         (if (string? textblock)
+           `(p ,textblock)
+           (error "The file for '~A' cannot be found. Make sure the build contains the specified problem from von." title))))
+
 

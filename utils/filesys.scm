@@ -17,6 +17,7 @@
 
 (define-module (utils filesys)
   #:use-module (utils util)
+  #:use-module (extension)
   #:use-module (haunt site)
   #:use-module (haunt post)
   #:use-module (haunt reader)
@@ -40,7 +41,10 @@
   (string-titlecase (directory->basename directory)))
 
 (define* (directory->posts directory #:key (readers (list commonmark-reader)))
-  (read-posts directory valid-file-name readers))
+  ; (read-posts directory valid-file-name readers)
+  (map 
+    (lambda (post) (extended-post post)) 
+    (read-posts directory valid-file-name readers)))
 
 (define* (directories->posts directories #:key (readers (list commonmark-reader)))
   (cond ((string? directories) (directory->posts directories))
