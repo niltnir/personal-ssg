@@ -22,6 +22,7 @@
   #:use-module (srfi srfi-19)
   #:use-module (ice-9 ftw)
   #:use-module (ice-9 textual-ports)
+  #:use-module (ice-9 string-fun)
   #:use-module (haunt post)
   #:export (extended-post inject sidenote gallery slide oly))
 
@@ -206,11 +207,18 @@
              ,@(index-map (lambda (slide index) (slide-view slide index)) slides))))))
 
 ;;; MATH
-; `(oly "japan-2010-4" 0)` 
+; `(oly "Japan 2010/4" 0)` 
+(define (oly-title->filename title block-index)
+  (string-append 
+    oly-path
+    (string-downcase
+      (string-replace-substring 
+        (string-replace-substring title " " "-")
+        "/" "-"))
+    "-" (number->string block-index) ".md"))
+
 (define (oly title block-index)
-  ; title is a string of the form "contest-year-number"
-  (let* ((filename (string-append 
-                    oly-path title "-" (number->string block-index) ".md"))
+  (let* ((filename (oly-title->filename title block-index))
          (port (open-input-file filename))
          (textblock (get-string-all port)))
          (close-port port)
@@ -219,4 +227,3 @@
              (split-string textblock "\n\n"))
            (error "The file for '~A' cannot be found. 
            Make sure the build contains the specified problem from von." title))))
-

@@ -39,13 +39,12 @@ latex_to_katex () {
 
 write_md () {
     local text="$1"
-    mkdir -p ../.tmp/oly/
-    cd ../.tmp/oly/
+    mkdir -p ./.tmp/oly/
+    cd ./.tmp/oly/
     echo "Writing to $FILENAME.md..."
     echo "$text" > "$FILENAME".md
 }
 
 OUT="$(latex_to_katex "$(python -m von show "$TITLE" -b "$BLOCK_NUM")")"
 write_md "$OUT"
-echo "$OUT"
 exit 0

@@ -41,7 +41,6 @@
   (string-titlecase (directory->basename directory)))
 
 (define* (directory->posts directory #:key (readers (list commonmark-reader)))
-  ; (read-posts directory valid-file-name readers)
   (map 
     (lambda (post) (extended-post post)) 
     (read-posts directory valid-file-name readers)))
@@ -51,7 +50,6 @@
         ((list? directories) 
          (apply append! 
            (map (lambda (directory) 
-                  (format #t "Dir: ~a~%" directory)
                   (directory->posts directory #:readers readers)) 
                 directories)))
         (else #f)))

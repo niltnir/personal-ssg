@@ -5,7 +5,7 @@ tags: math, olympiad, inequality
 
 ## A Cyclic Fractional Inequality
 
-`(oly "japan-2010-4" 0)`
+`(oly "Japan 2010/4" 0)`
 
 `(inject '(hr))`
 
@@ -13,4 +13,4 @@ tags: math, olympiad, inequality
 
 ## Motivation
 
-`(oly "japan-2010-4" 1)`
+`(oly "Japan 2010/4" 1)`
