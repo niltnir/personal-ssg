@@ -4,7 +4,7 @@
 ;;; Copyright © 2016 Christopher Allan Webber <cwebber@dustycloud.org>
 ;;; Modifications Copyright © 2023-2024 Lynn Noda <lynn@nodalynn.com>
 ;;;
-;;; 202e--12-01: Modified 'atom-feeds' and 'atom-feeds-by-tag' to take an
+;;; 2023-12-01: Modified 'atom-feeds' and 'atom-feeds-by-tag' to take an
 ;;; optional 'input-directory' parameter specifying a path to relevant posts.
 ;;; These paths are then used to generate post objects instead of the default
 ;;; "/posts" directory.

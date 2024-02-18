@@ -17,6 +17,7 @@
 
 (define-module (extension)
   #:use-module (utils util)
+  #:use-module (utils sxml)
   #:use-module (srfi srfi-9)
   #:use-module (srfi srfi-19)
   #:use-module (ice-9 ftw)
@@ -48,28 +49,6 @@
   (let ((string (apply string-append strings)))
     (read (open-input-string string))))
 
-(define (node-header tag attributes) 
-  (if (null? attributes)
-    (list tag)
-    (list tag attributes)))
-
-(define (tag sxml)
-  (car sxml))
-
-(define (attribute? attribute)
-  (and (list? attribute) (equal? (car attribute) '@)))
-
-(define (attributes sxml)
-  (if (attribute? (cadr sxml)) (cadr sxml) '()))
-
-(define (contents sxml)
-  (if (null? (attributes sxml)) (cdr sxml) (cddr sxml)))
-
-; (code (@ (some-att "hello")) "This is some code!")
-; (h2 (p (@ (class "sxml")) "some sxml here!") "more code here")
-(define (node-list? sxml)
-  (list? (tag sxml)))
-
 (define (embedded-sxml sxml) 
   "Within SXML, looks for 'code' tags with parseable s-expressions and
   returns a new document which directly replaces those tags with the eval of
@@ -92,11 +71,6 @@
                            (if (string? content) content (embedded-sxml content)))
                          cntnts)))))))
 
-;; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! FIX !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-;; the random ((evaled node p "blah blah blah")) in the output sxml is because
-;; initially, the code used to look like 
-;; (p (code "(oly \"japan-2010-4\" 0)"))
-;; and the initial 'p' is replaced by its contents but keeps the nesting...
 (define (remove-bad-p-tags sxml)
   "Within SXML, look for degenerate uses of paragraph tags and replace them
   with their contents. So far, these include p tags that only contain a single
@@ -105,7 +79,10 @@
         ((node-list? sxml) (map (lambda (node) (remove-bad-p-tags node)) sxml))
         ((and (equal? (tag sxml) 'p) (null? (attributes sxml)) 
               (= (length (contents sxml)) 1) (list? (car (contents sxml))))
-         (car (contents sxml)))
+         (let ((replacement (car (contents sxml))))
+           (if (node-list? replacement)
+             `(div (@ (class "oly")) ,@replacement)
+             replacement)))
         ((or (equal? (tag sxml) 'li) (equal? (tag sxml) 'blockquote))
          (let ((new-content (accumulate 
                               (lambda (content accum) 
@@ -230,14 +207,15 @@
 ;;; MATH
 ; `(oly "japan-2010-4" 0)` 
 (define (oly title block-index)
-  ;title is a string of the form "contest-year-number"
+  ; title is a string of the form "contest-year-number"
   (let* ((filename (string-append 
                     oly-path title "-" (number->string block-index) ".md"))
          (port (open-input-file filename))
          (textblock (get-string-all port)))
          (close-port port)
          (if (string? textblock)
-           `(p ,textblock)
-           (error "The file for '~A' cannot be found. Make sure the build contains the specified problem from von." title))))
-
+           (map (lambda (paragraph) `(p ,paragraph))
+             (split-string textblock "\n\n"))
+           (error "The file for '~A' cannot be found. 
+           Make sure the build contains the specified problem from von." title))))
 

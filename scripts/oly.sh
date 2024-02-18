@@ -19,10 +19,6 @@
 # ./oly "Japan 2010/4" 0
 TITLE=$1
 BLOCK_NUM=$2
-PROBLEM=$(python -m von show "$TITLE" -b 0)
-SOLUTION=$(python -m von show "$TITLE" -b 1)
-MOTIVATION=$(python -m von show "$TITLE" -b 2)
-FULLTEXT="${PROBLEM} ${SOLUTION} ${MOTIVATION}"
 
 make_filename () {
     echo "$TITLE $BLOCK_NUM" | tr '[:upper:]' '[:lower:]' | sed -e "s/[\/\ ]/-/g"
@@ -31,14 +27,14 @@ make_filename () {
 FILENAME=$(make_filename)
 
 latex_to_katex () {
-    local katex=$(echo "$1" |
+    local katex="$(echo "$1" |
     # Replace inline math dollar signs with \(\)
     perl -0777 -pe 's/(^|[^\$])\$([^\$]+)\$([^\$]|$)/$1\\($2\\)$3/g' |
     # Replace display math dollar signs with \[\]
     perl -0777 -pe 's/(^|[^\$])\$\$([^\$]+)\$\$([^\$]|$)/$1\\[$2\\]$3/g' |
     # # Wrap \[\] around environments 
-    perl -0777 -pe 's/(\\begin{.*}[\s\S]*?\\end{.*})/\\[\1\\]/g')
-    echo $katex
+    perl -0777 -pe 's/(\\begin{.*}[\s\S]*?\\end{.*})/\\[\1\\]/g')"
+    echo "$katex"
 }
 
 write_md () {
@@ -49,17 +45,7 @@ write_md () {
     echo "$text" > "$FILENAME".md
 }
 
-OUT=""
-if [ "$BLOCK_NUM" == 0 ]; then
-    OUT=$(latex_to_katex "$PROBLEM")
-elif [ "$BLOCK_NUM" == 1 ]; then 
-    OUT=$(latex_to_katex "$SOLUTION")
-elif [ "$BLOCK_NUM" == 2 ]; then
-    OUT=$(latex_to_katex "$MOTIVATION")
-else 
-    OUT=$(latex_to_katex "$FULLTEXT")
-fi
-
+OUT="$(latex_to_katex "$(python -m von show "$TITLE" -b "$BLOCK_NUM")")"
 write_md "$OUT"
-# echo "$OUT"
+echo "$OUT"
 exit 0

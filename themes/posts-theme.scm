@@ -19,15 +19,12 @@
   #:use-module (srfi srfi-9)
   #:use-module (srfi srfi-19)
   #:use-module (utils external)
+  #:use-module (utils sxml)
   #:use-module (haunt site)
   #:use-module (haunt post)
   #:use-module (haunt builder blog)
   #:use-module (themes layouts main-layout)
   #:export (posts-theme))
-
-(define (first-paragraph post)
-  (or (car (filter (lambda (node) (equal? 'p (car node))) (post-sxml post)))
-      ""))
 
 ;;; FEED
 (define %feed-prefix "/feeds/tags")
@@ -64,7 +61,7 @@
                     (h2 (@ (style "margin-bottom: .1em;"))  (a (@ (href ,uri)) ,(post-ref post 'title)))
                     ,@(post-data post) 
                     (div (@ (style "margin-bottom: .4em; margin-top: .4em"))
-                         ,(first-paragraph post))
+                         ,(first-paragraph (post-sxml post)))
                     (a (@ (href ,uri)) "read more ➤"))))
             (posts/reverse-chronological posts)))))
 

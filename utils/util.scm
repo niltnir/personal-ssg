@@ -21,6 +21,8 @@
             accumulate
             every
             any
+            non-null-strings
+            split-string
             matching-prefix?
             valid-parens?
             number->english
@@ -46,6 +48,22 @@
 
 (define (any predicate elements)
   (accumulate (lambda (el acc) (or (predicate el) acc)) #f elements))
+
+(define (non-null-strings lst)
+  (filter (lambda (str) (not (string-null? str))) lst))
+
+(define (split-string text subtext)
+  "Splits the string TEXT into a list of substrings based on the 
+  delimiter SUBTEXT."
+  (let ((first-occurence (string-contains text subtext))
+        (sub-length (string-length subtext)))
+    (non-null-strings
+      (if (number? first-occurence)
+        (cons (substring text 0 first-occurence)
+              (split-string 
+                (substring text (+ first-occurence sub-length))
+                subtext))
+        (cons text '())))))
 
 (define (matching-prefix? string prefixes)
   (any (lambda (prefix) (string-prefix? prefix string)) prefixes))

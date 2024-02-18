@@ -29,7 +29,8 @@
       '((author . "Lynn Noda")
 	(email  . "lynn@nodalynn.com"))
       #:readers (list commonmark-reader)
-      #:builders (list (page "pages/index.md" "index.html")
+      #:builders (list 
+                       (page "pages/index.md" "index.html")
                        (page "pages/contact.md" "contact.html")
                        (page "pages/math.md" "math/index.html")
                        (page "pages/cs.md" "cs/index.html")
@@ -48,4 +49,5 @@
                        (atom-feed "pages/prose/essay" #:file-name "feeds/essay.xml" #:subtitle "Recent Essays")
                        (atom-feed "pages/math/oly" #:file-name "feeds/oly.xml" #:subtitle "Recent Olympiad Solutions")
                        (atom-feed '("pages/prose" "pages/math") #:file-name "feeds/feed.xml")
-                       (atom-feeds-by-tag '("pages/prose" "pages/math"))))
+                       (atom-feeds-by-tag '("pages/prose" "pages/math"))
+                       ))
