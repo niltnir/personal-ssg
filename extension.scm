@@ -63,8 +63,9 @@
              ;; therefore contents MUST be a list of strings
              (if (parseable-strings? cntnts) (eval (parsed-sexp cntnts) (current-module)) sxml))
             ((equal? tg 'pre) ; math codeblock for KaTex
-             (let ((replacement (contents (car cntnts))))
-               `(p ,@replacement)))
+             (let ((replacement (car (contents (car cntnts)))))
+               (map (lambda (paragraph) `(p ,paragraph))
+                    (split-string replacement "\n\n"))))
             (else (append
                     (node-header tg attr)
                     (map (lambda (content) 
