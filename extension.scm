@@ -50,6 +50,13 @@
   (let ((string (apply string-append strings)))
     (read (open-input-string string))))
 
+(define (math-block? sxml)
+  ; math codeblock for KaTex
+  (and (equal? (tag sxml) 'pre) 
+       (equal? (class-attribute (car (contents sxml))) 
+               "language-math")))
+
+; BUG: Multiple evaluation on certain nodes?
 (define (embedded-sxml sxml) 
   "Within SXML, looks for 'code' tags with parseable s-expressions and
   returns a new document which directly replaces those tags with the eval of
@@ -63,7 +70,7 @@
             ((and (equal? tg 'code) (null? attr)) ; no nesting of sxml in 'code' tag
              ;; therefore contents MUST be a list of strings
              (if (parseable-strings? cntnts) (eval (parsed-sexp cntnts) (current-module)) sxml))
-            ((equal? tg 'pre) ; math codeblock for KaTex
+            ((math-block? sxml)
              (let ((replacement (car (contents (car cntnts)))))
                (map (lambda (paragraph) `(p ,paragraph))
                     (split-string replacement "\n\n"))))
@@ -151,7 +158,6 @@
 ; '(gallery ("creations/posters" "Title of Gallery" "Gallery Caption" "Description of Gallery"))'
 ; `(gallery ("test/hello.jpg" "Title of Hello" "Caption Here" "Description of things going on here.")
 ;           ("foo.jpg" "Foo" "The foo entered the bar..."))`
-
 (define gallery
   (case-lambda*
 
@@ -207,7 +213,6 @@
              ,@(index-map (lambda (slide index) (slide-view slide index)) slides))))))
 
 ;;; MATH
-; `(oly "Japan 2010/4" 0)` 
 (define (oly-title->filename title block-index)
   (string-append 
     oly-path
@@ -217,13 +222,17 @@
         "/" "-"))
     "-" (number->string block-index) ".md"))
 
+; `(oly "Japan 2010/4" 0)` 
 (define (oly title block-index)
   (let* ((filename (oly-title->filename title block-index))
          (port (open-input-file filename))
          (textblock (get-string-all port)))
          (close-port port)
          (if (string? textblock)
-           (map (lambda (paragraph) `(p ,paragraph))
-             (split-string textblock "\n\n"))
+           (let ((sxml (map (lambda (paragraph) `(p ,paragraph))
+                            (split-string textblock "\n\n"))))
+             (if (= block-index 1)
+               (append sxml `((p (@ (style "text-align: right")) "\\(\\blacksquare\\)")))
+               sxml))
            (error "The file for '~A' cannot be found. 
            Make sure the build contains the specified problem from von." title))))

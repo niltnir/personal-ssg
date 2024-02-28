@@ -18,8 +18,11 @@
 (define-module (utils sxml)
   #:use-module (srfi srfi-1)
   #:export (node-header 
-            tag attribute? 
+            tag 
+            attribute? 
             attributes 
+            attribute-list
+            class-attribute
             contents 
             node-list? 
             first-paragraph))
@@ -37,6 +40,15 @@
 
 (define (attributes sxml)
   (if (attribute? (cadr sxml)) (cadr sxml) '()))
+
+(define (attribute-list sxml)
+  (cdr (attributes sxml)))
+
+(define (class-attribute sxml)
+  (let ((class-pair (filter (lambda (attr) (equal? (tag attr) 'class))
+                            (attribute-list sxml))))
+    (if (null? class-pair) '()
+      (cadar class-pair))))
 
 (define (contents sxml)
   (cond ((null? sxml) sxml)

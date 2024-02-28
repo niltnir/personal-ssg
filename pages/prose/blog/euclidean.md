@@ -23,21 +23,18 @@ theorems, and lemmas as I worked them out on sheets of paper. Eventually I
 started solving some exercises, and soon I was craving to get past the theory
 to dive right into the wild west of exhilarating problems.
 
-One fun problem`(sidenote "The solution can be found elsewhere. If motivation
-permits, I will post the solution on this site.")` I was immediately confronted
-with was the following:
+One fun problem`(sidenote "For those impatiently curious, the solution is on
+this site.")` I was immediately confronted with was the following:
 
-*Given a circle and a point inside of it, take all the chords through the point
-and aggregate their midpoints. Prove that the resulting figure is a circle with
-its diameter defined between the point and the center of the circle.*
+`(oly "Canada 1991/3" 0)`
 
 The beauty of Euclidean geometry lies in its simple character. There are no
 crazy equations`(sidenote "With the exceptions of rectilinear coordinates,
 complex numbers, barycentric coordinates, linear algebra, etc.")`, no confusing
 objects, no fancy notation, yet results are often astonishing. It's no wonder
 that geometry is called the **king** of mathematics. And strangely, the process
-of exploring and solving problems synthetically can often feel closer to
-attempting a problem in discrete math than analysis.
+of exploring and solving problems synthetically can often feel close to
+discrete math.
 
 Unfortunately, geometry gets a bad rap in conventional education and other
 academic institutions. It's often written off as "useless" and "trivial" by

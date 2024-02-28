@@ -10,7 +10,7 @@ these writings beneficial, literally share the word(s)!
 
 ## [Blog](/prose/blog)
 
-My blog will be used for broadcasting updates on my life. This is in contrast
+My blog will be used for broadcasting life or site updates. This is in contrast
 to *"serious prose"* which will be left for essays.
 
 `(inject '(hr))`

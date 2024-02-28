@@ -27,11 +27,11 @@ and participating in them. Through these contests, I learned the art of
 problem-solving—a skill requiring inventing new paths in the face of apparent
 dead ends.
 
-I also gained a love of solving what are known as *Olympiad*`(sidenote "The
-Olympiad culture has a rich and deep history dating back to East Europe in the
-early 20th century.")` problems: difficult proof problems whose essay-format
-solutions require deep and clever insights. My favorite problems are in number
-theory and combinatorics.
+I also gained a love of solving what are known as [*Olympiad*](/math/oly)
+`(sidenote "The Olympiad culture has a rich and deep history dating back to
+East Europe in the early 20th century.")` problems: difficult proof problems
+whose essay-format solutions require deep and clever insights. My favorite
+problems are in number theory and combinatorics.
 
 More recently, I've started diving into areas of higher math, one of which is
 real analysis. I may start linking [notes](/math#mathnotes) as I learn new

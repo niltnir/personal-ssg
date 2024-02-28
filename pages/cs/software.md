@@ -64,7 +64,9 @@ back as something different.
 
 `(inject '(hr))`
 
-## [Color Switcher](https://github.com/niltnir/color-switcher)
+`(inject '(h2 (@ (id "color-switcher"))
+(a (@ (href "https://github.com/niltnir/color-switcher"))
+"Color Switcher")))`
 
 *Color Switcher* is my first web project using pure HTML, CSS, and JS.
 
@@ -72,11 +74,10 @@ Here's a [link](https://okimath.com/cs00/color_switcher.html) to a working
 version. The text is in Japanese, but hopefully, the interface is intuitive
 enough to grok.
 
-The game comes from a simple math olympiad
-[problem](https://aops.com/community/p7622138) I found a long time ago.
-The idea is to invent an algorithm to make all the cells in the grid reach the
-same parity (color in the case of *Color Switcher*, key direction in the case
-of the math problem).
+The game comes from a simple math olympiad [problem](/math/oly/bamo-19993.html)
+I found a long time ago. The idea is to invent an algorithm to make all the
+cells in the grid reach the same parity (color in the case of *Color Switcher*,
+key direction in the case of the math problem).
 
 The surprising part is how little knowledge is actually required to solve the
 problem. Primary students with problem-solving backgrounds have a good chance

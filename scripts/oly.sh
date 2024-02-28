@@ -28,12 +28,17 @@ FILENAME=$(make_filename)
 
 latex_to_katex () {
     local katex="$(echo "$1" |
-    # Replace inline math dollar signs with \(\)
-    perl -0777 -pe 's/(^|[^\$])\$([^\$]+)\$([^\$]|$)/$1\\($2\\)$3/g' |
+    # Replace LaTeX quotes with normal ones
+    perl -0777 -pe 's/``/\"/g' |
+    perl -0777 -pe 's/\x27\x27/\"/g' |
     # Replace display math dollar signs with \[\]
-    perl -0777 -pe 's/(^|[^\$])\$\$([^\$]+)\$\$([^\$]|$)/$1\\[$2\\]$3/g' |
-    # # Wrap \[\] around environments 
-    perl -0777 -pe 's/(\\begin{.*}[\s\S]*?\\end{.*})/\\[\1\\]/g')"
+    perl -0777 -pe 's/(^|[^\\\$])\$\$(.+?)\$\$/$1\\[$2\\]/sg' |
+    # Replace inline math dollar signs with \(\)
+    perl -0777 -pe 's/(^|[^\\\$])\$(.+?)\$/$1\\($2\\)/sg' |
+    # Wrap \[\] around environments 
+    perl -0777 -pe 's/(\\begin{.*}[\s\S]*?\\end{.*})/\\[$1\\]/g' |
+    # Remove potential \[\] around displayed environments
+    perl -0777 -pe 's/(\\\[[^\]]*?)(\\\[)(.*?)(\\\])(.*?\\\])/$1$3$5/sg')"
     echo "$katex"
 }
 
