@@ -158,7 +158,7 @@ of \(k\) such that \(p^k\) divides \(a\), where \(p\) is a prime number.
 
 \(\gdef\ord{\operatorname*{ord}}\)
 \(\ord_p(a)\:\) – The order of \(a\) modulo \(p\): the minimum value of
-\(d\) such that \(a^d \equiv 1 \pmod{p}\).
+\(d\) such that \(a^d \equiv 1 \pmod{p}.\)
 
 ```
 
@@ -181,7 +181,7 @@ otherwise specified.
 
 \(AB \cap XY \:\) – The point of intersection between lines \(AB\) and \(XY\).
 
-\(A_1A_2\dots A_n \:\) – The polygon containing points \(A_1\), \(A_2\), \(\dots\)
+\(A_1A_2\dots A_n \:\) – The polygon whose vertices are \(A_1\), \(A_2\), \(\dots\)
 , \(A_n\).
 
 \((A_1A_2\dots A_n) \:\) – The circle containing points \(A_1\), \(A_2\), \(\dots\)
