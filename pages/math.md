@@ -34,7 +34,7 @@ Problems and solutions can be found by following the link above. If you want to
 work on a problem first, I suggest you stay on the problem index until you are
 sure you want to look at the solution. A brief discussion of the motivation for
 the solution usually follows the solution itself. Any concerns about notation
-should be dealt with [here](math/oly-notation.html).
+should be dealt with [here](/math/oly-notation.html).
 
 Problems are typically taken from national Olympiads which can be readily
 accessed via the
