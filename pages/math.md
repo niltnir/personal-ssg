@@ -45,29 +45,28 @@ either not known or hard to track (for example, a problem may appear in
 multiple places by different authors from varying periods).
 
 The solutions are primarily of my own insight, but are likely to be similar to
-official solutions if they exist. If any mathematical errors are found
-(especially significant ones), please contact
-me via [email](mailto:lynn@nodalynn.com); I want to have
-[Cunningham's Law](https://en.wikipedia.org/wiki/Ward_Cunningham#Law)
-work for me as much as possible`(sidenote "I will likely also post the
-solutions on AoPS when I get the chance.")`. Luckily, the topic in discussion
-is mathematics, so misinformation is less significant and is *a priori*
+official solutions if they exist. If any mathematical errors are found, please contact
+me via [email](mailto:lynn@nodalynn.com); I'm hoping
+[Cunningham's Law](https://en.wikipedia.org/wiki/Ward_Cunningham#Law) will at
+least catch critical errors`(sidenote "I will likely also post the solutions on
+AoPS when I get the chance.")`.  Luckily, the topic in discussion is
+mathematics, so misinformation is less significant and is *a priori*
 correctable. Nonetheless, I have tried my best to verify the correctness of my
 solutions by contemplating solutions written by others.
 
 In a similar vein, my solutions will likely not be the cleanest in the world.
-Therefore, I recommend approaching them with a grain of salt. Healthy
+Therefore, I recommend going through them with a grain of salt. Healthy
 skepticism is encouraged so that you not only notice potentially *incorrect*
-reasoning (as in the case above), but are able to come up with more clever
-ideas.
+reasoning (as in the case above), but also to be able to come up with smarter
+approaches.
 
 As a final disclaimer, I **do not own** any of the problems posted on the list
 unless otherwise specified. This means that copyright holders such as
 the [MAA](https://maa.org/) and the [CMS](https://cms.math.ca/) have full
 rights to their respective problems. The problems are posted in the hopes that
 my solutions and their commentary will be useful to students (myself included)
-and educators in mathematics under fair-use/dealing. I do **not** gain
-monetarily from using the problems in any manner whatsoever.
+and educators in mathematics. I do **not** gain monetarily from using the
+problems in any manner whatsoever.
 
 I have gained a lot from the free resources provided by the culture, and
 hopefully, my limited insights are something I can give back.

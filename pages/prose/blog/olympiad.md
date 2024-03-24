@@ -19,8 +19,8 @@ problems in total, and the difficulty is on the easier side compared to harder
 Olympiads. The selection consists of problems I've solved which I found
 interesting, cute, instructional, prototypical, and/or anything in between.
 
-Hopefully, the number of problems on this list will grow over time, and as I
-gain more experience, the difficulty and diversity will also broaden.
+I plan for this list to grow over time. Hopefully, as I gain more experience,
+the difficulty and diversity of the problems will also broaden.
 
 Unfortunately, I do not have geometry diagrams yet, so you'll have to make do
 without them for now... sorry :(

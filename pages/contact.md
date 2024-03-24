@@ -18,5 +18,5 @@ Although official, do not send me messages through any accounts listed below. I
 will not respond for the simple reason that I do not actively check them.
 These accounts are meant more for archive purposes.
 
-- **Twitter:** [@niltnir](https://nitter.net/niltnir)
+- `(inject '(del (b "Twitter: ") "@niltnir"))` ... nitter is dead.
 - **Lambdus Youtube:** [@lambdus_](https://yewtu.be/channel/UCblZhI-BOumGXwJYQ97OmNw)
