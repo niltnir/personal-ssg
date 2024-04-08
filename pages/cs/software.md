@@ -31,9 +31,9 @@ Essentially, this is what I do to update the site:
     - I stylize or add interactivity with CSS.
 
 The beauty of this is the sheer lack of templating languages and
-Javascript`(sidenote "So far, the only Javascript used on this site is a simple
-link to KaTeX through a CDN for rendering math.")` in making an "interactive"
-and "modern-looking" static website.
+Javascript`(sidenote "So far, the only Javascript used on this site are CDN
+links to KaTeX to render math.")` in making an "interactive" and
+"modern-looking" static website.
 
 `(inject '(hr))`
 
