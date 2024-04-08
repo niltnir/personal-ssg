@@ -5,10 +5,13 @@ title: Contact
 
 Reach me through:
 
-- **Email:** [lynn@nodalynn.com](mailto:lynn@nodalynn.com)
+- **Email:** \\(\text{lynn}\texttt{@}\text{nodalynn}{.}\text{com}\\)
+  - **GPG:** [52C6 65CA 0EF9 7581 6D1C 11EA 0FB1 EA82 0016 8FBB](/assets/pub.asc)
 - **Github:** [https://github.com/niltnir](https://github.com/niltnir)
 
-As you can see, I try to limit the number of places I check.
+As you can see, I try to limit the number of places I check. If you decide to
+contact me via email, using [encryption](https://emailselfdefense.fsf.org/en/)
+is highly recommended to protect your privacy.
 
 `(inject '(hr))`
 

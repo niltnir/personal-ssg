@@ -51,7 +51,8 @@ the language specification itself: its ginormous ecosystem.")` because Zedigo
 requires a highly interactive front-end (although Typescript can make DX
 significantly better). I use Vim for most of my editing, but switch to Emacs
 evil-mode when working on Lisp projects. You can find my dotfiles
-[here](https://github.com/niltnir/dotfiles).
+[here](https://github.com/niltnir/dotfiles) and my GPG key
+[here](/assets/pub.asc).
 
 Within computing itself, I love classical symbolic computation with a budding
 interest in PLT. I learned Common Lisp around the same time I discovered SICP,

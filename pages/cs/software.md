@@ -30,8 +30,10 @@ Essentially, this is what I do to update the site:
     - I implement functionality with Scheme (with SXML embedded as a "DSL").
     - I stylize or add interactivity with CSS.
 
-The beauty of this is the sheer lack of templating languages and Javascript in
-making an "interactive" and "modern-looking" static website.
+The beauty of this is the sheer lack of templating languages and
+Javascript`(sidenote "So far, the only Javascript used on this site is a simple
+link to KaTeX through a CDN for rendering math.")` in making an "interactive"
+and "modern-looking" static website.
 
 `(inject '(hr))`
 

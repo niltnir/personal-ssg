@@ -31,12 +31,12 @@ I decided to go with [KaTeX](https://katex.org/) for math rendering. The syntax
 is pretty much the same as LaTeX and it *just works*. The nice thing about
 KaTeX is that it adheres to the single responsibility principle: it only
 renders math. The mess of formatting then becomes the responsibility of the
-client.  Although this sounds like a nuisance, on the flip side, it means that
-the client gets full control over the page layout. You may miss theorem
-numbering and proof environments, but that comes with it the hidden assumption
-that the document is static. The dynamic web, however, has a whole host of
-tools that allows you to present math in unconventional ways. KaTeX simply
-gets out of the way and allows you to do just that.
+client. This sounds burdensome, but this also means that the client gets full
+control over the page layout. You may miss theorem numbering and proof
+environments, but that comes with it the hidden assumption that the document is
+static. The dynamic web, on the other hand, has a whole host of tools that
+allows you to present math in unconventional ways. KaTeX gives you that freedom
+by getting out of your way.
 
 For Olympiad solutions, my write-ups are stored and organized using a tool
 called [VON](https://github.com/vEnhance/von). It maintains modular chunks of

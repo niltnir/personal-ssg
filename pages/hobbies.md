@@ -64,10 +64,9 @@ coming to my TED Talk.
   - I found and solved 214 of the original 219 levels… Those last five though…
   - [This level](https://babaiswiki.fandom.com/wiki/Maritime_Adventures) has
     shorter solutions, but I somehow managed to discover a strange alternative.
-- Rubik's Cube and Friends
+- Rubik's Cube and friends
 - Wire Puzzles
-- Moscow Puzzles
-- Martin Gardner Puzzles
+- Recreational Math Puzzles
 - Escape Rooms
 
 I've never done a real-life escape room or a puzzle hunt, but I am curious.
@@ -80,7 +79,6 @@ I've never done a real-life escape room or a puzzle hunt, but I am curious.
 - Chess/Shogi
 - Othello/Reversi
 - Card Games
-- Minecraft
 - Tetris
 - Indie Games
 - Narrative Games`(sidenote "Instead of playing narrative games myself, I like

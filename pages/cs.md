@@ -52,7 +52,8 @@ In terms of software usage, I generally pertain to the following:
 - **Terminal:** Alacritty
 - **Shell:** Bash
 - **File Manager:** ranger
-- **Browser:** Firefox | qutebrowser
+- **Browser:** Librewolf | qutebrowser
+- **Email Client:** Mutt
 - **PDF Viewer:** zathura
 - **Image Viewer:** vimiv
 - **Media Player:** mpv
@@ -67,9 +68,7 @@ Stuff I want to try at some point:
 
 1. i3 window manager
 2. fish shell... maybe even Zsh
-3. Nyxt browser
-4. Mutt email client
-5. I don't use Arch btw... at least not yet >:D
+3. I don't use Arch btw... at least not yet >:D
 
 `(inject '(hr))`
 
